@@ -110,6 +110,7 @@ def pretrain(train_valid_test_dataset_provider,
     print_datetime('after megatron is initialized')
 
     args = get_args()
+    print("args: " + str(args))
     timers = get_timers()
 
     # Model, optimizer, and learning rate.
