@@ -868,6 +868,7 @@ def _add_training_args(parser):
                        help='Disable fusing gradient accumulation to weight '
                        'gradient computation of linear layers',
                        dest='gradient_accumulation_fusion')
+    print("parser: " + str(parser))
     return parser
 
 
