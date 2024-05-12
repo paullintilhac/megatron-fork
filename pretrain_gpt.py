@@ -91,6 +91,7 @@ def forward_step(data_iterator, model):
 def train_valid_test_datasets_provider(train_val_test_num_samples):
     """Build train, valid, and test datasets."""
     args = get_args()
+    print("args inside train_valid_test_datasets_provider: " + str(args))
     train_ds, valid_ds, test_ds = None, None, None
 
     print_rank_0('> building train, validation, and test datasets '
@@ -145,7 +146,7 @@ def train_valid_test_datasets_provider(train_val_test_num_samples):
 
 
 if __name__ == "__main__":
-
+    print("args at top: " + str(args))
     pretrain(train_valid_test_datasets_provider,
              model_provider,
              ModelType.encoder_or_decoder,
