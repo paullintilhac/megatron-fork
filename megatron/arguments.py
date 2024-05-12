@@ -46,6 +46,7 @@ def parse_args(extra_args_provider=None, ignore_unknown_args=False):
     if extra_args_provider is not None:
         parser = extra_args_provider(parser)
 
+    print("ignore_unknown arge: " + str(ignore_unknown_args))
     # Parse.
     if ignore_unknown_args:
         args, _ = parser.parse_known_args()
@@ -141,7 +142,7 @@ def validate_args(args, defaults={}):
     if args.recompute_activations:
         args.recompute_granularity = 'selective'
     del args.recompute_activations
-    print("micro batch sizey: " + str(args.micro_batch_size))
+    print("micro batch size: " + str(args.micro_batch_size))
 
     # Set input defaults.
     for key in defaults:
