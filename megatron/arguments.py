@@ -869,6 +869,7 @@ def _add_training_args(parser):
                        'gradient computation of linear layers',
                        dest='gradient_accumulation_fusion')
     print("parser: " + str(parser))
+    print("group: " + str(group))
     return parser
 
 
