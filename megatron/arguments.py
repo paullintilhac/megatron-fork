@@ -157,6 +157,7 @@ def validate_args(args, defaults={}):
             setattr(args, key, defaults[key])
 
     # Batch size.
+    print("args in arguments.py: " + str(args))
     assert args.micro_batch_size is not None
     assert args.micro_batch_size > 0
     if args.global_batch_size is None:
