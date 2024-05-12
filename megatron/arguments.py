@@ -141,6 +141,7 @@ def validate_args(args, defaults={}):
     if args.recompute_activations:
         args.recompute_granularity = 'selective'
     del args.recompute_activations
+    print("micro batch sizey: " + str(args.micro_batch_size))
 
     # Set input defaults.
     for key in defaults:
